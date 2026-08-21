@@ -7,28 +7,10 @@ J59NOCメンバが新しくリポジトリを作成する際に使用できる�
 ## テンプレートの利用方法
 
 1. GitHub の [J59NOC/template](https://github.com/J59NOC/template) リポジトリを開きます。
-2. **Use this template** をクリックし、**Create a new repository** を選択します。
+2. 右上の **Use this template** をクリックします。
 3. 作成するリポジトリのオーナー、名前、公開設定を入力します。
-4. **Create repository from template** をクリックしてリポジトリを作成します。
+4. **Create repository** をクリックしてリポジトリを作成します。
 5. 作成したリポジトリで、この README の内容をプロジェクトに合わせて編集し、冒頭の注意書きを削除します。
-
-## テンプレート内容
-
-| パス | 説明 |
-|------|------|
-| [.github/ISSUE_TEMPLATE/default.md](.github/ISSUE_TEMPLATE/default.md) | イシューのデフォルトテンプレート |
-| [.github/ISSUE_TEMPLATE/config.yml](.github/ISSUE_TEMPLATE/config.yml) | ブランクイシューを非表示にする設定 |
-| [managing-labels/labels.json](managing-labels/labels.json) | 登録するラベルの定義ファイル |
-| [managing-labels/create-labels.sh](managing-labels/create-labels.sh) | ラベルを一括作成するシェルスクリプト |
-
-## イシューテンプレート
-
-`.github/ISSUE_TEMPLATE/default.md` に以下のセクションが定義されています。
-
-- **概要/Overview** (必須)
-- **完了条件/Completion condition** (必須) — チェックリスト形式
-- **関連リンク/link** — Slack リンクなど
-- **やらないこと** — スコープ外の明示
 
 ## ラベル管理
 
@@ -78,3 +60,21 @@ bash create-labels.sh <リポジトリ名>
 ```
 
 スクリプトは `J59NOC/<リポジトリ名>` に対して GitHub CLI の `gh label create` を実行します。
+
+## テンプレート内容
+
+| パス | 説明 |
+|------|------|
+| [.github/ISSUE_TEMPLATE/default.md](.github/ISSUE_TEMPLATE/default.md) | イシューのデフォルトテンプレート |
+| [.github/ISSUE_TEMPLATE/config.yml](.github/ISSUE_TEMPLATE/config.yml) | ブランクイシューを非表示にする設定 |
+| [managing-labels/labels.json](managing-labels/labels.json) | 登録するラベルの定義ファイル |
+| [managing-labels/create-labels.sh](managing-labels/create-labels.sh) | ラベルを一括作成するシェルスクリプト |
+
+## イシューテンプレート
+
+`.github/ISSUE_TEMPLATE/default.md` に以下のセクションが定義されています。
+
+- **概要/Overview** (必須)
+- **完了条件/Completion condition** (必須) — チェックリスト形式
+- **関連リンク/link** — Slack リンクなど
+- **やらないこと** — スコープ外の明示
