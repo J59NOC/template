@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]
+if [[ $# -ne 1 ]]
 then
 	echo "Usage: $0 {repository_name}" 1>&2
 	echo "ex. $ $0 overall" 1>&2
-	exit
+	exit 1
 fi
 
 # 対象のリポジトリを指定
