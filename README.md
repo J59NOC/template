@@ -54,7 +54,7 @@ gh auth login
 
 #### 3. ラベルを追加
 
-追加したいラベルの名前・色・説明を [labels.json](managing-labels/labels.json) に記入し、対象リポジトリ名を引数にしてスクリプトを実行します。
+対象リポジトリ名を引数にしてスクリプトを実行します。
 
 ```bash
 cd managing-labels
@@ -62,7 +62,8 @@ bash create-labels.sh <リポジトリ名>
 # 例: bash create-labels.sh overall
 ```
 
-スクリプトは `J59NOC/<リポジトリ名>` に対して GitHub CLI の `gh label create` を実行します。
+- スクリプトは `J59NOC/<リポジトリ名>` に対して GitHub CLI の `gh label create` を実行します。
+- ラベルの名前・色・説明は [labels.json](managing-labels/labels.json) に記載されています。
 
 ## j59noc チームの追加
 
@@ -88,21 +89,13 @@ gh api \
 	--jq '.[] | select(.slug == "j59noc") | {team: .slug, permission: .permission}'
 ```
 
-## テンプレート内容
+## issueテンプレート
+
+issue 作成の時に使うテンプレートが [.github/ISSUE_TEMPLATE](.github/ISSUE_TEMPLATE) に定義されています
+
+### テンプレート内容
 
 | パス | 説明 |
 |------|------|
 | [.github/ISSUE_TEMPLATE/default.md](.github/ISSUE_TEMPLATE/default.md) | イシューのデフォルトテンプレート |
 | [.github/ISSUE_TEMPLATE/config.yml](.github/ISSUE_TEMPLATE/config.yml) | ブランクイシューを非表示にする設定 |
-| [managing-labels/labels.json](managing-labels/labels.json) | 登録するラベルの定義ファイル |
-| [managing-labels/create-labels.sh](managing-labels/create-labels.sh) | ラベルを一括作成するシェルスクリプト |
-| [add-j59noc-team.sh](add-j59noc-team.sh) | `j59noc` チームを追加するシェルスクリプト |
-
-## イシューテンプレート
-
-`.github/ISSUE_TEMPLATE/default.md` に以下のセクションが定義されています。
-
-- **概要/Overview** (必須)
-- **完了条件/Completion condition** (必須) — チェックリスト形式
-- **関連リンク/link** — Slack リンクなど
-- **やらないこと** — スコープ外の明示
