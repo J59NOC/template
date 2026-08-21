@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Overall",
+    "color": "f3c4dc",
+    "description": "全体リーダーチームに関するタスク"
+  },
+  {
+    "name": "Arrangement",
+    "color": "cadae0",
+    "description": "アレンジメントチームに関するタスク"
+  },
+  {
+    "name": "BB",
+    "color": "c6e0f4",
+    "description": "BBチームに関するタスク"
+  },
+  {
+    "name": "SV",
+    "color": "e2d0f0",
+    "description": "SVチームに関するタスク"
+  },
+  {
+    "name": "L2L3_P",
+    "color": "d9ecc0",
+    "description": "L2L3_Pチームに関するタスク"
+  },
+  {
+    "name": "L2L3_G",
+    "color": "35714e",
+    "description": "L2L3_Gチームに関するタスク"
+  },
+  {
+    "name": "AP_P",
+    "color": "f6caae",
+    "description": "AP_Pチームに関するタスク"
+  },
+  {
+    "name": "AP_G",
+    "color": "ee8131",
+    "description": "AP_Gチームに関するタスク"
+  },
+  {
+    "name": "CB_P",
+    "color": "f7d1ca",
+    "description": "CB_Pチームに関するタスク"
+  },
+  {
+    "name": "CB_G",
+    "color": "a22116",
+    "description": "CB_Gチームに関するタスク"
+  }
+]
