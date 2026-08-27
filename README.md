@@ -11,32 +11,12 @@ J59NOCメンバが新しくリポジトリを作成する際に使用できる�
 3. 作成するリポジトリのオーナー、名前、公開設定を入力します。
 4. **Create repository** をクリックしてリポジトリを作成します。
 5. 作成したリポジトリを対象に、下記の要領で設定してください。
-- ラベルの設定
 - チームの設定
 6. README.md をリポジトリに合わせて変更してください。
 
-## ラベル管理
+## GitHub CLI の準備
 
-### 定義済みラベル
-
-[labels.json](managing-labels/labels.json) に以下のチーム別ラベルが定義されています。
-
-| ラベル名 | 説明 |
-|----------|------|
-| Overall | 全体リーダーチームに関するタスク |
-| Arrangement | アレンジメントチームに関するタスク |
-| BB | BBチームに関するタスク |
-| SV | SVチームに関するタスク |
-| L2L3_P | L2L3_Pチームに関するタスク |
-| L2L3_G | L2L3_Gチームに関するタスク |
-| AP_P | AP_Pチームに関するタスク |
-| AP_G | AP_Gチームに関するタスク |
-| CB_P | CB_Pチームに関するタスク |
-| CB_G | CB_Gチームに関するタスク |
-
-### ラベルの一括作成手順
-
-#### 1. GitHub CLI をインストール
+### GitHub CLI をインストール
 
 ```bash
 brew install gh
@@ -44,7 +24,7 @@ brew install gh
 
 参考: https://github.com/cli/cli#installation
 
-#### 2. GitHub CLI にログイン
+### GitHub CLI にログイン
 
 ```bash
 gh auth login
@@ -52,31 +32,17 @@ gh auth login
 
 参考: https://cli.github.com/manual/gh_auth_login
 
-#### 3. ラベルを追加
-
-対象リポジトリ名を引数にしてスクリプトを実行します。
-
-```bash
-cd managing-labels
-bash create-labels.sh <リポジトリ名>
-# 例: bash create-labels.sh overall
-```
-
-- スクリプトは `J59NOC/<リポジトリ名>` に対して GitHub CLI の `gh label create` を実行します。
-- ラベルの名前・色・説明は [labels.json](managing-labels/labels.json) に記載されています。
-
 ## j59noc チームの追加
 
 Private リポジトリを作成した場合は、チームを追加しないと誰も見ることができません。
-`J59NOC/j59noc` チームを追加するやり方はこちらです。
+リポジトリに `J59NOC/j59noc` チームを追加するやり方はこちらです。
 このスクリプトで追加されるチームのリポジトリ権限は `Maintain` です。
 
-### GitHub CLI で追加する方法
+### チームの追加
 
-GitHub CLI にログインし、リポジトリ名を指定してスクリプトを実行します。
+リポジトリ名を指定してスクリプトを実行します。
 
 ```bash
-gh auth login
 ./add-j59noc-team.sh <リポジトリ名>
 # 例: ./add-j59noc-team.sh template
 ```
