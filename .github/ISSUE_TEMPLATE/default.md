@@ -7,8 +7,11 @@ assignees: ''
 
 ---
 
-## 概要/Overview  (Required)
-- 
+## なぜやるのか/Why (Required):
+-
+
+# 何をやるのか/What (Required):
+-
 
 ## 完了条件/Completion condition  (Required)
 - [ ] タスク1
