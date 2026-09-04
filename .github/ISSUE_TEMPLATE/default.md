@@ -7,10 +7,10 @@ assignees: ''
 
 ---
 
-## なぜやるのか/Why (Required):
+## なぜやるのか/Why (Required)
 -
 
-## 何をやるのか/What (Required):
+## 何をやるのか/What (Required)
 -
 
 ## 完了条件/Completion condition  (Required)
